@@ -15,15 +15,19 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Simpsons Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw3-W6-ysT">
-                                <rect key="frame" x="0.0" y="120" width="414" height="113"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Simpsons Quotes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Dw3-W6-ysT">
+                                <rect key="frame" x="0.0" y="120" width="414" height="45.5"/>
                                 <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="32"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                        <constraints>
+                            <constraint firstItem="Dw3-W6-ysT" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="A7i-Fz-c5r"/>
+                            <constraint firstItem="Dw3-W6-ysT" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="BM5-Nk-Btk"/>
+                            <constraint firstItem="Dw3-W6-ysT" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="76" id="V97-Ys-2Jm"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
                 </viewController>

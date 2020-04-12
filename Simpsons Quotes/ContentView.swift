@@ -9,26 +9,45 @@
 import SwiftUI
 
 struct ContentView: View {
+    
+    @ObservedObject  var newQuote = MainService()
     let screenWidth = UIScreen.main.bounds.size.width
     let screenHeight = UIScreen.main.bounds.size.height
+
     
     var body: some View {
         
         VStack{
             VStack(){
-                Text("Insert Brain Here!!")
+                
+                Text("\(newQuote.quoteSimpson.character ?? "Character")")
                     .fontWeight(.medium)
-                    .font(.custom("Chalkboard SE", size: 30))
+                    .font(.custom("Chalkboard SE", size: 14))
                     .foregroundColor(Color.init("GrayGreenColor"))
-            } .frame(maxWidth: .infinity, maxHeight: (screenHeight/3) - 100)
+                    //.frame(.center)
+                    .padding(.top, 40)
+                
+                
+                Text("\(newQuote.quoteSimpson.quote ?? "Insert Brain Here!! no data load")")
+                    
+                    .fontWeight(.medium)
+                    .font(.custom("Chalkboard SE", size: 18))
+                    .foregroundColor(Color.init("GrayGreenColor"))
+                    .padding()
+                    
+                    .lineLimit(nil)
+                
+                
+            } .frame(maxWidth: .infinity, maxHeight: (screenHeight/3) - 70)
+               // .background(Color.init("YellowColor"))
             
             //Spacer()
             
             VStack(){
-                    Image("mainHomer")
-                     .resizable()
-                     .scaledToFit()
-            } .frame(maxWidth: .infinity, maxHeight: (screenHeight/3) + 100)
+                Image(uiImage: newQuote.data != nil ? UIImage(data:newQuote.data!)! : UIImage())
+                    .resizable()
+                    .scaledToFit()
+            } .frame(maxWidth: .infinity, maxHeight: (screenHeight/3) + 70)
             
             //Spacer()
             
@@ -45,7 +64,7 @@ struct ContentView: View {
                 
                 ZStack{
                     Button(action: {
-                        
+                        self.newQuote.getWeatherData()
                     }){
                         VStack(){
                             Image(systemName: "quote.bubble.fill")
