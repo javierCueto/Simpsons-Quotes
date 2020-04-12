@@ -3,7 +3,6 @@
 //  Simpsons Quotes
 //
 //  Created by José Javier Cueto Mejía on 12/04/20.
-//  Copyright © 2020 Pozolx. All rights reserved.
 //
 
 import SwiftUI
@@ -24,7 +23,6 @@ struct ContentView: View {
                     .fontWeight(.medium)
                     .font(.custom("Chalkboard SE", size: 14))
                     .foregroundColor(Color.init("GrayGreenColor"))
-                    //.frame(.center)
                     .padding(.top, 40)
                 
                 
