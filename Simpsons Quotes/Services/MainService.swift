@@ -45,7 +45,7 @@ class MainService:ObservableObject{
                 }
                 
             }else {
-                print("error al convertir array a simple object")
+                print("error al  convertir array a simple object")
             }
             
             
